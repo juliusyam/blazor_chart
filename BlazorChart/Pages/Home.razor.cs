@@ -3,6 +3,7 @@ using PSC.Blazor.Components.Chartjs.Models.Bar;
 using PSC.Blazor.Components.Chartjs.Models.Common;
 using System.Collections.Generic;
 using System;
+using PSC.Blazor.Components.Chartjs.Models.Line;
 
 namespace BlazorChart.Pages;
 
@@ -57,49 +58,43 @@ public partial class Home : ComponentBase
         }
     };
 
-    private readonly BarChartConfig _config2 = new()
+    private readonly LineChartConfig _config2 = new()
     {
         Options = new Options()
         {
+            RegisterDataLabels = true,
             Plugins = new Plugins()
             {
-                Legend = new Legend()
+                DataLabels = new DataLabels()
                 {
-                    Align = Align.Center,
-                    Display = false,
-                    Position = LegendPosition.Right
+                    Align = DatalabelsAlign.Start,
+                    Anchor = DatalabelsAnchor.Start,
                 }
-            },
-            Scales = new Dictionary<string, Axis>()
-            {
-                {
-                    Scales.XAxisId, new Axis()
-                    {
-                        Stacked = true,
-                        Ticks = new Ticks()
-                        {
-                            MaxRotation = 0,
-                            MinRotation = 0
-                        }
-                    }
-                },
-                {
-                    Scales.YAxisId, new Axis()
-                    {
-                        Stacked = true
-                    }
-                }
-            },
+            }
         },
-        Data = new Data<BarDataset>()
+        Data = new LineData()
         {
             Labels = ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6", "Label 7", "Label 8", "Label 9"],
             Datasets = [
-                new BarDataset()
+                new LineDataset()
                 {
                     Label = "Value",
                     Data = [6, 10, 13, 15, 19, 21, 15, 30, 1],
-                    BackgroundColor = ["#D2D3E4", "#C8C9E8", "#BEBFEB", "#A9AAF2", "#7F82FF", "#5A5CC9", "#4749AE", "#3D40A1", "#343693"],
+                    BorderColor = "#7F82FF",
+                    BorderWidth = 1
+                },
+                new LineDataset()
+                {
+                    Label = "Value 2",
+                    Data = [8, 15, 13, 19, 4, 17, 6, 25, 29],
+                    BorderColor = "#A9AAF2",
+                    BorderWidth = 1
+                },
+                new LineDataset()
+                {
+                    Label = "Value 3",
+                    Data = [19, 25, 18, 17, 3, 5, 17, 19, 23],
+                    BorderColor = "#4749AE",
                     BorderWidth = 1
                 }
                 ],
