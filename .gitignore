@@ -1,0 +1,12 @@
+.vs/
+*/obj/
+*/bin/
+
+*/wwwroot/lib/bootstrap/dist/css/**.css.map
+*/wwwroot/lib/bootstrap/dist/css/**.min.css
+*/wwwroot/lib/bootstrap/dist/css/**.rtl.css
+
+*/wwwroot/lib/bootstrap/dist/js/**.js.map
+*/wwwroot/lib/bootstrap/dist/js/**.bundle.js
+*/wwwroot/lib/bootstrap/dist/js/**.esm.js
+*/wwwroot/lib/bootstrap/dist/js/**.min.js
