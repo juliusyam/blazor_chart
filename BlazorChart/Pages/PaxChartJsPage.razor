@@ -9,12 +9,16 @@
     </a>
 </div>
 
-<ChartComponent @ref="chartComponent"
-                ChartJsConfig="chartJsConfig"
-                OnEventTriggered="ChartEventTriggered">
-</ChartComponent>
-
 <ChartComponent @ref="chartComponent2"
                 ChartJsConfig="chartJs2Config"
                 OnEventTriggered="ChartEventTriggered">
 </ChartComponent>
+
+<div style="width: 100%; max-width: 50rem;">
+    <div>
+        <ChartComponent @ref="chartComponent"
+                        ChartJsConfig="chartJsConfig"
+                        OnEventTriggered="ChartEventTriggered">
+        </ChartComponent>
+    </div>
+</div>

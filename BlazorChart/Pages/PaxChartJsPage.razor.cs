@@ -45,6 +45,7 @@ public partial class PaxChartJsPage : ComponentBase
             Options = new()
             {
                 Responsive = true,
+                MaintainAspectRatio = true,
             }
         };
 
@@ -72,6 +73,7 @@ public partial class PaxChartJsPage : ComponentBase
             Options = new()
             {
                 Responsive = true,
+                MaintainAspectRatio = true,
             }
         };
 
