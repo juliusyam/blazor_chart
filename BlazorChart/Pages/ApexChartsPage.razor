@@ -1,0 +1,18 @@
+﻿@page "/apex-charts"
+@using ApexCharts
+
+<ApexChart TItem="ApexDataEntry" Title="Sample Data">
+    <ApexPointSeries TItem="ApexDataEntry"
+                     Items="_dataEntries"
+                     Name="Net Profit"
+                     SeriesType="SeriesType.Bar"
+                     XValue="e => e.Category"
+                     YValue="e=> e.NetProfit" />
+
+    <ApexPointSeries TItem="ApexDataEntry"
+                     Items="_dataEntries"
+                     Name="Revenue"
+                     SeriesType="SeriesType.Bar"
+                     XValue="e => e.Category"
+                     YValue="e=> e.Revenue" />
+</ApexChart>

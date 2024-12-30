@@ -1,3 +1,4 @@
+using ApexCharts;
 using BlazorChart;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -18,5 +19,7 @@ builder.Services.AddChartJs(options =>
 });
 
 builder.Services.AddRadzenComponents();
+
+builder.Services.AddApexCharts();
 
 await builder.Build().RunAsync();
