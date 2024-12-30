@@ -1,0 +1,13 @@
+﻿@page "/pax-chartjs"
+@using pax.BlazorChartJs
+
+<PageTitle>PAX ChartJs</PageTitle>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-primary" @onclick="Randomize">Randomize</button>
+</div>
+
+<ChartComponent @ref="chartComponent"
+                ChartJsConfig="chartJsConfig"
+                OnEventTriggered="ChartEventTriggered">
+</ChartComponent>
