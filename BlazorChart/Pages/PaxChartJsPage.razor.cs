@@ -19,14 +19,28 @@ public partial class PaxChartJsPage : ComponentBase
             Data = new ChartJsData()
             {
                 Labels = ["Jan", "Feb", "Mar"],
-                Datasets = new List<ChartJsDataset>()
+                Datasets = [
+                    new BarDataset()
                     {
-                        new BarDataset()
-                        {
-                            Label = "Dataset 1",
-                            Data = [ 1, 2, 3 ]
-                        }
+                        Label = "Dataset 1",
+                        Data = [3, 5, 1]
+                    },
+                    new BarDataset()
+                    {
+                        Label = "Dataset 2",
+                        Data = [15, 13, 3]
+                    },
+                    new BarDataset()
+                    {
+                        Label = "Dataset 3",
+                        Data = [8, 7, 19]
+                    },
+                    new BarDataset()
+                    {
+                        Label = "Dataset 4",
+                        Data = [3, 1, 7]
                     }
+                ]
             },
             Options = new()
             {
@@ -39,22 +53,21 @@ public partial class PaxChartJsPage : ComponentBase
             Type = ChartType.line,
             Data = new ChartJsData()
             {
-                Labels = ["Jan", "Feb", "Mar"],
-                Datasets = new List<ChartJsDataset>()
-                {
+                Labels = ["Jan", "Feb", "Mar", "Apr", "May"],
+                Datasets = [
                     new LineDataset()
                     {
                         BorderColor = "#69aaac",
                         Label = "Dataset 1",
-                        Data = [2, 5, 7]
+                        Data = [2, 5, 7, 9, 15]
                     },
                     new LineDataset()
                     {
                         BorderColor = "#451369",
                         Label = "Dataset 2",
-                        Data = [5, 8, 3]
+                        Data = [5, 8, 3, 9, 10]
                     }
-                }
+                ]
             },
             Options = new()
             {
