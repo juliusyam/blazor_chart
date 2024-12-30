@@ -4,12 +4,16 @@
 
 <PageTitle>Radzen</PageTitle>
 
-<RadzenButton Text="Hi"></RadzenButton>
-@code {
-    private int currentCount = 0;
-
-    private void IncrementCount()
-    {
-        currentCount++;
-    }
-}
+<RadzenChart SeriesClick=@OnSeriesClick style="height: 400px">
+    <RadzenBarSeries Data="@revenue2024" CategoryProperty="Quarter" Title="2024" LineType="LineType.Dashed" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenBarSeries>
+    <RadzenBarSeries Data="@revenue2023" CategoryProperty="Quarter" Title="2023" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenBarSeries>
+    <RadzenValueAxis Formatter="@FormatAsUSD">
+        <RadzenGridLines Visible="true" />
+        <RadzenAxisTitle Text="Revenue in USD" />
+    </RadzenValueAxis>
+    <RadzenBarOptions Radius="5" />
+</RadzenChart>
