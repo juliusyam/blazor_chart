@@ -3,6 +3,7 @@ using PSC.Blazor.Components.Chartjs.Models.Bar;
 using PSC.Blazor.Components.Chartjs.Models.Common;
 using PSC.Blazor.Components.Chartjs.Models.Line;
 using PSC.Blazor.Components.Chartjs.Models.Pie;
+using PSC.Blazor.Components.Chartjs.Models.Scatter;
 
 namespace BlazorChart.Pages;
 
@@ -122,6 +123,36 @@ public partial class ChartJsPage : ComponentBase
                     BackgroundColor = ["#D9EDEF", "#A3E5EB", "#6DDCE8", "#36D4E4", "#00CBE0", "#0B8EB8", "#194187", "#0F2954", "#061021"],
                     HoverOffset = 4
                 },
+                ]
+        }
+    };
+
+    private readonly ScatterChartConfig _config5 = new()
+    {
+        Data = new ScatterData()
+        {
+            Labels = ["Label 1, Label 2, Label 3, Label 4"],
+            Datasets = [
+                new ScatterDataset() {
+                    Label = "Dataset 1",
+                    BackgroundColor = "#00CBE0",
+                    Data = [
+                        new() { X = -8, Y = 2 },
+                        new() { X = 5, Y = 6 },
+                        new() { X = 4, Y = 7 },
+                        new() { X = 3.5M, Y = 3.5M }
+                    ],
+                },
+                new ScatterDataset() {
+                    Label = "Dataset 2",
+                    BackgroundColor = "#C23CE1",
+                    Data = [
+                        new() { X = -7, Y = 7 },
+                        new() { X = 5, Y = 6 },
+                        new() { X = 3, Y = 7 },
+                        new() { X = 6.5M, Y = 2.5M }
+                    ],
+                }
                 ]
         }
     };
