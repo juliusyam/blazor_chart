@@ -13,6 +13,7 @@ public partial class ChartJsPage : ComponentBase
         Options = new Options()
         {
             Responsive = true,
+            MaintainAspectRatio = true,
         },
         Data = new Data<BarDataset>()
         {
@@ -39,6 +40,7 @@ public partial class ChartJsPage : ComponentBase
         Options = new Options()
         {
             Responsive = true,
+            MaintainAspectRatio = true,
         },
         Data = new LineData()
         {
@@ -105,6 +107,7 @@ public partial class ChartJsPage : ComponentBase
         Options = new PieOptions()
         {
             Responsive = true,
+            MaintainAspectRatio = true,
             Rotation = -90,
             Circumference = 180
         },
