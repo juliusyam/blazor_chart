@@ -22,6 +22,14 @@ public partial class ApexChartsPage : ComponentBase
         new ApexDataEntry("Feb", 25, 78),
         new ApexDataEntry("Mar", 107, 37)
         ];
+
+    private readonly List<BoxPlotEntry> _boxPlotEntries = [
+        new BoxPlotEntry("Jan", 17, 25, 35, 40, 42),
+        new BoxPlotEntry("Feb", 3, 21, 23, 29, 37),
+        new BoxPlotEntry("Mar", 9, 10, 11, 12, 35)
+    ];
 }
 
 public record ApexDataEntry(string Category, int NetProfit, int Revenue);
+
+public record BoxPlotEntry(string Name, int Min, int Q1, int Median, int Q3, int Max);

@@ -25,8 +25,8 @@
                          Items="_dataEntries"
                          SeriesType="SeriesType.Donut"
                          Name="Gross Value"
-                         XValue="@(e => e.Category)"
-                         YAggregate="@(e => e.Sum(e => e.Revenue))" />
+                         XValue="e => e.Category"
+                         YAggregate="e => e.Sum(e => e.Revenue)" />
     </ApexChart>
 </div>
 
@@ -39,15 +39,15 @@
                          Items="_dataEntries"
                          Name="Dataset 1"
                          SeriesType="SeriesType.Scatter"
-                         XValue="@(e => e.Revenue)"
-                         YValue="@(e => e.NetProfit)" />
+                         XValue="e => e.Revenue"
+                         YValue="e => e.NetProfit" />
 
         <ApexPointSeries TItem="ApexDataEntry"
                          Items="_dataEntries2"
                          Name="Dataset 2"
                          SeriesType="SeriesType.Scatter"
-                         XValue="@(e => e.Revenue)"
-                         YValue="@(e => e.NetProfit)" />
+                         XValue="e => e.Revenue"
+                         YValue="e => e.NetProfit" />
     </ApexChart>
 </div>
 
@@ -59,14 +59,50 @@
                          Items="_dataEntries"
                          Name="Dataset 1"
                          SeriesType="SeriesType.Line"
-                         XValue="@(e => e.NetProfit)"
-                         YAggregate="@(e => e.Sum(e => e.Revenue))" />
+                         XValue="e => e.NetProfit"
+                         YAggregate="e => e.Sum(e => e.Revenue)" />
 
         <ApexPointSeries TItem="ApexDataEntry"
                          Items="_dataEntries2"
                          Name="Dataset 2"
                          SeriesType="SeriesType.Line"
-                         XValue="@(e => e.NetProfit)"
-                         YAggregate="@(e => e.Sum(e => e.Revenue))" />
+                         XValue="e => e.NetProfit"
+                         YAggregate="e => e.Sum(e => e.Revenue)" />
+    </ApexChart>
+</div>
+
+<div style="max-width: 50rem;">
+    <ApexChart TItem="BoxPlotEntry">
+
+        <ApexBoxPlotSeries TItem="BoxPlotEntry"
+                           Items="_boxPlotEntries"
+                           Name="incidents"
+                           XValue="e => e.Name"
+                           Max="e => e.Max"
+                           Min="e => e.Min"
+                           Quantile1="e => e.Q1"
+                           Quantile3="e => e.Q3"
+                           Median="e => e.Median" />
+    </ApexChart>
+</div>
+
+<div style="max-width: 50rem;">
+    <ApexChart TItem="ApexDataEntry" Title="Order  Value">
+
+        <ApexPointSeries TItem="ApexDataEntry"
+                         Items="_dataEntries"
+                         Name="Dataset 1"
+                         SeriesType="SeriesType.Radar"
+                         XValue="e => e.NetProfit"
+                         YAggregate="e => e.Sum(e => e.Revenue)"
+                         OrderByDescending="e=>e.Y" />
+
+        <ApexPointSeries TItem="ApexDataEntry"
+                         Items="_dataEntries2"
+                         Name="Dataset 2"
+                         SeriesType="SeriesType.Radar"
+                         XValue="e => e.NetProfit"
+                         YAggregate="e => e.Sum(e => e.Revenue)"
+                         OrderByDescending="e=>e.Y" />
     </ApexChart>
 </div>
