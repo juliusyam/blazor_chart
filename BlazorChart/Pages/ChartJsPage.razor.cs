@@ -6,7 +6,7 @@ using PSC.Blazor.Components.Chartjs.Models.Pie;
 
 namespace BlazorChart.Pages;
 
-public partial class Home : ComponentBase
+public partial class ChartJsPage : ComponentBase
 {
     private readonly BarChartConfig _config1 = new()
     {
