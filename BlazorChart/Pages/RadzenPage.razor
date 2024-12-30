@@ -1,0 +1,15 @@
+﻿@page "/radzen"
+@using Radzen
+@using Radzen.Blazor
+
+<PageTitle>Radzen</PageTitle>
+
+<RadzenButton Text="Hi"></RadzenButton>
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

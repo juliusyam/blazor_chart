@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.0" PrivateAssets="all" />
     <PackageReference Include="pax.BlazorChartJs" Version="0.8.5" />
     <PackageReference Include="PSC.Blazor.Components.Chartjs" Version="8.0.8" />
+    <PackageReference Include="Radzen.Blazor" Version="5.7.2" />
   </ItemGroup>
 
 </Project>
