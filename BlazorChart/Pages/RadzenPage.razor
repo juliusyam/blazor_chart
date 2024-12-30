@@ -17,3 +17,68 @@
     </RadzenValueAxis>
     <RadzenBarOptions Radius="5" />
 </RadzenChart>
+
+<RadzenChart>
+    <RadzenColumnSeries Data="@revenue2024" CategoryProperty="Quarter" Title="2024" LineType="LineType.Dashed" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenColumnSeries>
+    <RadzenColumnSeries Data="@revenue2023" CategoryProperty="Quarter" Title="2023" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenColumnSeries>
+    <RadzenColumnOptions Radius="5" />
+    <RadzenValueAxis Formatter="@FormatAsUSD">
+        <RadzenGridLines Visible="true" />
+        <RadzenAxisTitle Text="Revenue in USD" />
+    </RadzenValueAxis>
+</RadzenChart>
+
+<RadzenChart>
+    <RadzenDonutSeries Data="@revenue2023" CategoryProperty="Quarter" ValueProperty="Revenue" TotalAngle="180" StartAngle="180">
+        <ChildContent>
+            <RadzenSeriesDataLabels Visible="@showDataLabels" />
+        </ChildContent>
+        <TitleTemplate>
+            <div class="rz-donut-content">
+                <div>Revenue</div>
+                <div>for 2024</div>
+            </div>
+        </TitleTemplate>
+    </RadzenDonutSeries>
+</RadzenChart>
+
+<RadzenChart>
+    <RadzenChartTooltipOptions Shared="@sharedTooltip" />
+    <RadzenLineSeries Smooth="@smooth" Data="@revenue2023" CategoryProperty="Quarter" Title="2023" LineType="LineType.Dashed" ValueProperty="Revenue">
+        <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenLineSeries>
+    <RadzenLineSeries Smooth="@smooth" Data="@revenue2024" CategoryProperty="Quarter" Title="2024" ValueProperty="Revenue">
+        <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Circle" />
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenLineSeries>
+    <RadzenCategoryAxis Padding="20" />
+    <RadzenValueAxis Formatter="@FormatAsUSD">
+        <RadzenGridLines Visible="true" />
+        <RadzenAxisTitle Text="Revenue in USD" />
+    </RadzenValueAxis>
+</RadzenChart>
+
+<RadzenChart SeriesClick=@OnSeriesClick>
+    <RadzenPieSeries Data="@revenue2023" Title="Revenue" CategoryProperty="Quarter" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenPieSeries>
+</RadzenChart>
+
+<RadzenChart SeriesClick=@OnSeriesClick>
+    <RadzenStackedBarSeries Data="@revenue2024" CategoryProperty="Quarter" Title="2024" LineType="LineType.Dashed" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenStackedBarSeries>
+    <RadzenStackedBarSeries Data="@revenue2023" CategoryProperty="Quarter" Title="2023" ValueProperty="Revenue">
+        <RadzenSeriesDataLabels Visible="@showDataLabels" />
+    </RadzenStackedBarSeries>
+    <RadzenValueAxis Formatter="@FormatAsUSD" Min="0" Max="800000" Step="100000">
+        <RadzenGridLines Visible="true" />
+        <RadzenAxisTitle Text="Revenue in USD" />
+    </RadzenValueAxis>
+    <RadzenBarOptions Radius="5" />
+</RadzenChart>

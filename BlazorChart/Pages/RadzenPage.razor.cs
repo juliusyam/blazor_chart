@@ -7,6 +7,10 @@ namespace BlazorChart.Pages;
 public partial class RadzenPage : ComponentBase
 {
     private readonly bool showDataLabels = false;
+    private readonly bool smooth = false;
+    private readonly bool sharedTooltip = true;
+    private readonly bool showMarkers = true;
+
 
     static string FormatAsUSD(object value)
     {
