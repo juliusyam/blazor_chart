@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using PSC.Blazor.Components.Chartjs.Models.Bar;
 using PSC.Blazor.Components.Chartjs.Models.Common;
-using System.Collections.Generic;
-using System;
 using PSC.Blazor.Components.Chartjs.Models.Line;
 using PSC.Blazor.Components.Chartjs.Models.Pie;
 
