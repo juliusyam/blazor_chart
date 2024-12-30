@@ -6,7 +6,9 @@ namespace BlazorChart.Pages;
 public partial class PaxChartJsPage : ComponentBase
 {
     ChartJsConfig chartJsConfig = null!;
+    ChartJsConfig chartJs2Config = null!;
     ChartComponent? chartComponent;
+    ChartComponent? chartComponent2;
     private bool chartReady;
 
     protected override void OnInitialized()
@@ -25,8 +27,43 @@ public partial class PaxChartJsPage : ComponentBase
                             Data = [ 1, 2, 3 ]
                         }
                     }
+            },
+            Options = new()
+            {
+                Responsive = true,
+                MaintainAspectRatio = true,
             }
         };
+
+        chartJs2Config = new ChartJsConfig()
+        {
+            Type = ChartType.line,
+            Data = new ChartJsData()
+            {
+                Labels = ["Jan", "Feb", "Mar"],
+                Datasets = new List<ChartJsDataset>()
+                {
+                    new LineDataset()
+                    {
+                        BorderColor = "#69aaac",
+                        Label = "Dataset 1",
+                        Data = [2, 5, 7]
+                    },
+                    new LineDataset()
+                    {
+                        BorderColor = "#451369",
+                        Label = "Dataset 2",
+                        Data = [5, 8, 3]
+                    }
+                }
+            },
+            Options = new()
+            {
+                Responsive = true,
+                MaintainAspectRatio = true,
+            }
+        };
+
         base.OnInitialized();
     }
 
@@ -36,30 +73,5 @@ public partial class PaxChartJsPage : ComponentBase
         {
             chartReady = true;
         }
-    }
-
-    private void Randomize()
-    {
-        if (!chartReady)
-        {
-            return;
-        }
-
-        List<ChartJsDataset> updateDatasets = [];
-
-        foreach (var dataset in chartJsConfig.Data.Datasets)
-        {
-            if (dataset is BarDataset barDataset)
-            {
-                List<object> newData = new();
-                foreach (var data in barDataset.Data)
-                {
-                    newData.Add(Random.Shared.Next(1, 10));
-                }
-                barDataset.Data = newData;
-                updateDatasets.Add(dataset);
-            }
-        }
-        chartJsConfig.UpdateDatasetsSmooth(updateDatasets);
     }
 }
