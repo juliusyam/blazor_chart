@@ -156,4 +156,32 @@ public partial class ChartJsPage : ComponentBase
                 ]
         }
     };
+
+    private readonly BarChartConfig _config6 = new()
+    {
+        Options = new Options()
+        {
+            Responsive = true,
+            MaintainAspectRatio = true,
+        },
+        Data = new Data<BarDataset>()
+        {
+            Labels = ["Label 1", "Label 2", "Label 3", "Label 4", "Label 5", "Label 6", "Label 7", "Label 8", "Label 9"],
+            Datasets = [
+                new BarDataset()
+                {
+                    Label = "Dataset 1",
+                    Data = [6, 10, 13, 15, 19, 21, 15, 30, 1],
+                    BackgroundColor = ["#69aaac"],
+                    Type = "line"
+                },
+                new BarDataset()
+                {
+                    Label = "Dataset 1",
+                    Data = [6, 10, 13, 15, 19, 21, 15, 30, 1],
+                    BackgroundColor = ["#69aaac"]
+                },
+                ],
+        }
+    };
 }
