@@ -51,3 +51,14 @@ Community solutions are created to provide Chart.js to Blazor.
 > Pro: Takes in List of custom Record Type, Easy Configuration. Provides alternative data representation formats including Box Plot, Candlestick, Radar and Heatmap. Useful and reactive tooltip (follows mouse hover), along with menu options to zoom and download.
 
 > Con: Responsiveness takes a split second to re-render on detect screen size change. Initial loading takes time.
+
+### [Plotly](https://www.nuget.org/packages/Plotly.Blazor)
+[Documentation & Demo](https://laytec-ag.github.io/Plotly.Blazor/)\
+**Version as tested: 5.4.0**\
+**Package size as tested: 7.96MB**\
+**Total downloads: 356.4K**\
+*Last updated 15 days ago and supports .NET 6 onwards*\
+
+> Pro: Identical component for any type of chart. Easy Configuration. Provides alternative data representation formats including Box Plot, Candlestick, Area plot and Heatmap. Menu options to zoom, download, and draw trace lines.
+
+> Con: Responsiveness takes a split second to re-render on detect screen size change, and does not maintain aspect ratio. UI look and feel is somewhat dated.
