@@ -61,4 +61,4 @@ Community solutions are created to provide Chart.js to Blazor.
 
 > Pro: Identical component for any type of chart. Easy Configuration. Provides alternative data representation formats including Box Plot, Candlestick, Area plot and Heatmap. Menu options to zoom, download, and draw trace lines.
 
-> Con: Responsiveness takes a split second to re-render on detect screen size change, and does not maintain aspect ratio. UI look and feel is somewhat dated.
+> Con: Responsiveness takes a split second to re-render on detect screen size change, and does not maintain aspect ratio. UI look and feel is somewhat dated. Difficult to override default colours.

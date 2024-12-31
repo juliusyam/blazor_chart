@@ -26,6 +26,7 @@ public partial class PlotlyPage : ComponentBase
         {
             Name = "Dataset 1",
             Mode = ModeFlag.Lines | ModeFlag.Markers,
+            FillColor = "#00CBE0",
             X = [1, 2, 3, 4, 5, 6, 7, 8, 9],
             Y = [1, 2, 3, 6, 7, 11, 6, 7, 5]
         },
@@ -33,6 +34,7 @@ public partial class PlotlyPage : ComponentBase
         {
             Name = "Dataset 2",
             Mode = ModeFlag.Lines | ModeFlag.Markers,
+            FillColor = "#D000FF",
             X = [1, 2, 3, 4, 5, 6, 7, 8, 9],
             Y = [5, 8, 4, 7, 3, 10, 12, 1, 37]
         }
@@ -56,7 +58,7 @@ public partial class PlotlyPage : ComponentBase
     private IList<ITrace> pieData = [
         new Pie
         {
-            Values = [19, 26, 55 ],
+            Values = [19, 26, 55],
             Labels = ["Residential", "Non-Residential", "Utility"]
         }
         ];
@@ -65,20 +67,23 @@ public partial class PlotlyPage : ComponentBase
         new Box
         {
             Y = [86, 92, 77, 81, 70, 71, 72, 39, 48, 38, 6, 23, 69, 84, 60, 96, 75, 84, 84, 92, 75, 80, 47, 32, 16],
-            Name = "trace 0"
+            Name = "trace 0",
+            FillColor = "#00CBE0",
         },
         new Box
         {
             Y = [79, 65, 58, 49, 95, 29, 81, 38, 27, 21, 96, 68, 58, 40, 62, 30, 45, 53, 80, 83, 41, 39, 54, 50, 34],
             Name = "trace 1",
-            BoxMean = BoxMeanEnum.SD
+            BoxMean = BoxMeanEnum.SD,
+            FillColor = "#7F82FF",
         },
         new Box
         {
             Name = "trace 2",
             Y = [31, 50, 4, 6, 54, 58, 69, 32, 40, 24, 20, 17, 33, 8, 12, 97, 0, 4, 75, 10, 43, 70, 88, 0, 17],
             BoxMean = BoxMeanEnum.True,
-            BoxPoints = BoxPointsEnum.All
+            BoxPoints = BoxPointsEnum.All,
+            FillColor = "#D000FF",
         }
         ];
 
@@ -92,7 +97,7 @@ public partial class PlotlyPage : ComponentBase
             Theta = new[] { 0, 10, 25, 0, 205, 215, 0 }.OfType<object>().ToList(),
             Mode = Plotly.Blazor.Traces.ScatterPolarLib.ModeFlag.Lines,
             Fill = Plotly.Blazor.Traces.ScatterPolarLib.FillEnum.ToSelf,
-            FillColor = "#709BFF",
+            FillColor = "#00CBE0",
             Line = new Plotly.Blazor.Traces.ScatterPolarLib.Line() { Color = "black" }
         };
         var trace2 = new ScatterPolar()
@@ -101,7 +106,7 @@ public partial class PlotlyPage : ComponentBase
             Theta = new[] { 0, 55, 75, 0 }.OfType<object>().ToList(),
             Mode = Plotly.Blazor.Traces.ScatterPolarLib.ModeFlag.Lines,
             Fill = Plotly.Blazor.Traces.ScatterPolarLib.FillEnum.ToSelf,
-            FillColor = "#E4FF87",
+            FillColor = "#D000FF",
             Line = new Plotly.Blazor.Traces.ScatterPolarLib.Line() { Color = "black" }
         };
         var trace3 = new ScatterPolar()
@@ -110,7 +115,7 @@ public partial class PlotlyPage : ComponentBase
             Theta = new[] { 0, 100, 120, 0, 305, 320, 0 }.OfType<object>().ToList(),
             Mode = Plotly.Blazor.Traces.ScatterPolarLib.ModeFlag.Lines,
             Fill = Plotly.Blazor.Traces.ScatterPolarLib.FillEnum.ToSelf,
-            FillColor = "#FFAA70",
+            FillColor = "#7F82FF",
             Line = new Plotly.Blazor.Traces.ScatterPolarLib.Line() { Color = "black" }
         };
         var trace4 = new ScatterPolar()
@@ -119,7 +124,7 @@ public partial class PlotlyPage : ComponentBase
             Theta = new[] { 0, 165, 195, 0 }.OfType<object>().ToList(),
             Mode = Plotly.Blazor.Traces.ScatterPolarLib.ModeFlag.Lines,
             Fill = Plotly.Blazor.Traces.ScatterPolarLib.FillEnum.ToSelf,
-            FillColor = "#FFDF70",
+            FillColor = "#36D4E4",
             Line = new Plotly.Blazor.Traces.ScatterPolarLib.Line() { Color = "black" }
         };
         var trace5 = new ScatterPolar()
@@ -128,7 +133,7 @@ public partial class PlotlyPage : ComponentBase
             Theta = new[] { 0, 3, 3, 0 }.OfType<object>().ToList(),
             Mode = Plotly.Blazor.Traces.ScatterPolarLib.ModeFlag.Lines,
             Fill = Plotly.Blazor.Traces.ScatterPolarLib.FillEnum.ToSelf,
-            FillColor = "#B6FFB4",
+            FillColor = "#D478E9",
             Line = new Plotly.Blazor.Traces.ScatterPolarLib.Line() { Color = "black" }
         };
 
