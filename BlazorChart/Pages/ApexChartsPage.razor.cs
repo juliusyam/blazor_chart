@@ -11,6 +11,11 @@ public partial class ApexChartsPage : ComponentBase
         Markers = new Markers { Size = 6 },
     };
 
+    private readonly ApexChartOptions<BoxPlotEntry> _boxPlotOptions = new()
+    {
+        PlotOptions = new PlotOptions { BoxPlot = new PlotOptionsBoxPlot { Colors = new BloxPlotColors { Lower = "#00CBE0", Upper = "#D000FF" } } },
+    };
+
     private readonly List<ApexDataEntry> _dataEntries = [
         new ApexDataEntry("Jan", 12, 33),
         new ApexDataEntry("Feb", 43, 42),
@@ -28,6 +33,17 @@ public partial class ApexChartsPage : ComponentBase
         new BoxPlotEntry("Feb", 3, 21, 23, 29, 37),
         new BoxPlotEntry("Mar", 9, 10, 11, 12, 35)
     ];
+
+    private static string GetPointColor(string title)
+    {
+        return title switch
+        {
+            "Jan" => "#7F82FF",
+            "Feb" => "#00CBE0",
+            "Mar" => "#D000FF",
+            _ => "#D478E9",
+        };
+    }
 }
 
 public record ApexDataEntry(string Category, int NetProfit, int Revenue);
