@@ -1,0 +1,10 @@
+﻿@page "/plotly"
+
+@using Plotly.Blazor
+@using Plotly.Blazor.Traces
+
+<PageTitle>Plotly</PageTitle>
+
+<div style="max-width: 50rem;">
+    <PlotlyChart @bind-Config="config" @bind-Layout="layout" @bind-Data="data" @ref="chart" />
+</div>
