@@ -24,13 +24,13 @@ public partial class ChartJsPage : ComponentBase
                 {
                     Label = "Dataset 1",
                     Data = [6, 10, 13, 15, 19, 21, 15, 30, 1],
-                    BackgroundColor = ["#69aaac"]
+                    BackgroundColor = ["#00CBE0"]
                 },
                 new BarDataset()
                 {
                     Label = "Dataset 2",
                     Data = [8, 15, 3, 7, 20, 23, 18, 33, 27],
-                    BackgroundColor = ["#4e15ac"]
+                    BackgroundColor = ["#D000FF"]
                 }
                 ],
         }
@@ -58,14 +58,14 @@ public partial class ChartJsPage : ComponentBase
                 {
                     Label = "Dataset 2",
                     Data = [8, 15, 13, 19, 4, 17, 6, 25, 29],
-                    BorderColor = "#A9AAF2",
+                    BorderColor = "#00CBE0",
                     BorderWidth = 2
                 },
                 new LineDataset()
                 {
                     Label = "Dataset 3",
                     Data = [19, 25, 18, 17, 3, 5, 17, 19, 23],
-                    BorderColor = "#4749AE",
+                    BorderColor = "#D000FF",
                     BorderWidth = 3
                 }
                 ],
@@ -172,14 +172,15 @@ public partial class ChartJsPage : ComponentBase
                 {
                     Label = "Dataset 1",
                     Data = [6, 10, 13, 15, 19, 21, 15, 30, 1],
-                    BackgroundColor = ["#69aaac"],
+                    BackgroundColor = ["#00CBE0"],
+                    BorderColor = ["#00CBE0"],
                     Type = "line"
                 },
                 new BarDataset()
                 {
                     Label = "Dataset 1",
                     Data = [6, 10, 13, 15, 19, 21, 15, 30, 1],
-                    BackgroundColor = ["#69aaac"]
+                    BackgroundColor = ["#D000FF"]
                 },
                 ],
         }
