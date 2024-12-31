@@ -6,5 +6,21 @@
 <PageTitle>Plotly</PageTitle>
 
 <div style="max-width: 50rem;">
-    <PlotlyChart @bind-Config="config" @bind-Layout="layout" @bind-Data="data" @ref="chart" />
+    <PlotlyChart @bind-Config="config" @bind-Layout="layout" @bind-Data="scatterData" @ref="chart" />
+</div>
+
+<div style="max-width: 50rem;">
+    <PlotlyChart @bind-Config="config" @bind-Layout="barLayout" @bind-Data="barData" @ref="chart" />
+</div>
+
+<div style="max-width: 50rem;">
+    <PlotlyChart @bind-Config="config" @bind-Layout="layout" @bind-Data="pieData" @ref="chart" />
+</div>
+
+<div style="max-width: 50rem;">
+    <PlotlyChart @bind-Config="config" @bind-Layout="layout" @bind-Data="boxPlotData" @ref="chart" />
+</div>
+
+<div style="max-width: 50rem;">
+    <PlotlyChart @bind-Config="config" @bind-Layout="layout" @bind-Data="areaPolarData" @ref="chart" />
 </div>

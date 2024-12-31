@@ -50,4 +50,4 @@ Community solutions are created to provide Chart.js to Blazor.
 
 > Pro: Takes in List of custom Record Type, Easy Configuration. Provides alternative data representation formats including Box Plot, Candlestick, Radar and Heatmap. Useful and reactive tooltip (follows mouse hover), along with menu options to zoom and download.
 
-> Con: Responsiveness takes a split second to re-render on detect screen size change.
+> Con: Responsiveness takes a split second to re-render on detect screen size change. Initial loading takes time.
